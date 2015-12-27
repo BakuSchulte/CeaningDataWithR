@@ -1,0 +1,258 @@
+This codebook explains the variables included in the tidyData.txt file.
+
+Data collection
+======================================
+
+The data comes from an experiment conducted in order to collect data about wearable computing using a Samsung Galaxy S II smartphone.
+
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
+Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
+
+For each record it is provided:
+======================================
+
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+- Triaxial Angular velocity from the gyroscope. 
+- A 561-feature vector with time and frequency domain variables. 
+- Its activity label. 
+- An identifier of the subject who carried out the experiment.
+
+The data selected for this statistic come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+
+
+
+Computation of the data included in tidyData.txt file
+========================================================
+
+The original data used to compute the values in tidyData.txt file a dataset of 10299 observations extracted from the data provided by the experiment data mentioned in the data collection section, wich have been summarized in order to produce tidyData.txt file. 
+
+The tidyData.txt file contains 68 different variables, from wich the first two, personID and activityName are variables by wich the original dataset was grouped by and the other 66 remaining variables represent average values calculated with the mean function from the original 10299 observations. 
+
+
+
+Variables included in tidyData.txt 
+========================================================
+
+Below you can find the explanation of the variables included in the tidyData.txt file, as follows:
+the index of the column and the name of the variable, as contained in the header of tidyData.txt file, followed by an explanation of the variable.
+
+
+"1" "personID"
+Identification number of the person who has done in the activities carried out for data collection
+
+"2" "activityName"
+Name of the sport activity: it is a categorical variable wich can take the following values
+# 1 WALKING
+# 2 WALKING_UPSTAIRS
+# 3 WALKING_DOWNSTAIRS
+# 4 SITTING
+# 5 STANDING
+# 6 LAYING
+
+"3" "tBodyAccMeanX"
+Time domain signal body acceleration mean x-axis
+
+"4" "tBodyAccMeanY"
+time domain signals body acceleration mean y-axis
+
+"5" "tBodyAccMeanZ"
+time domain signals body acceleration mean z-axis
+
+"6" "tBodyAccStdX"
+time domain signals body acceleration Standard deviation x-axis
+
+"7" "tBodyAccStdY"
+time domain signals body acceleration Standard deviation y-axis
+
+"8" "tBodyAccStdZ"
+time domain signals body acceleration Standard deviation z-axis
+
+"9" "tGravityAccMeanX"
+time domain signals gravity acceleration mean x-axis
+
+"10" "tGravityAccMeanY"
+time domain signals gravity acceleration mean y-axis
+
+"11" "tGravityAccMeanZ"
+time domain signals gravity acceleration mean z-axis
+
+"12" "tGravityAccStdX"
+time domain signals gravity acceleration Standard deviation x-axis
+
+"13" "tGravityAccStdY"
+time domain signals gravity acceleration Standard deviation y-axis
+
+"14" "tGravityAccStdZ"
+time domain signals gravity acceleration Standard deviation z-axis
+
+"15" "tBodyAccJerkMeanX"
+time domain signals body acceleration Jerk signals mean x-axis
+
+"16" "tBodyAccJerkMeanY"
+time domain signals body acceleration Jerk signals mean y-axis
+
+"17" "tBodyAccJerkMeanZ"
+time domain signals body acceleration Jerk signals mean z-axis
+
+"18" "tBodyAccJerkStdX"
+time domain signals body acceleration Jerk signals Standard deviation x-axis
+
+"19" "tBodyAccJerkStdY"
+time domain signals body acceleration Jerk signals Standard deviation y-axis
+
+"20" "tBodyAccJerkStdZ"
+time domain signals body acceleration Jerk signals Standard deviation z-axis
+
+"21" "tBodyGyroMeanX"
+time domain signals body gyroscope mean x-axis
+
+"22" "tBodyGyroMeanY"
+time domain signals body gyroscope mean y-axis
+
+"23" "tBodyGyroMeanZ"
+time domain signals body gyroscope mean z-axis
+
+"24" "tBodyGyroStdX"
+time domain signals body gyroscope Standard deviation x-axis
+
+"25" "tBodyGyroStdY"
+time domain signals body gyroscope Standard deviation y-axis
+
+"26" "tBodyGyroStdZ"
+time domain signals body gyroscope Standard deviation z-axis
+
+"27" "tBodyGyroJerkMeanX"
+time domain signals body gyroscope Jerk signals mean x-axis
+
+"28" "tBodyGyroJerkMeanY"
+time domain signals body gyroscope Jerk signals mean y-axis
+
+"29" "tBodyGyroJerkMeanZ"
+time domain signals body gyroscope Jerk signals mean z-axis
+
+"30" "tBodyGyroJerkStdX"
+time domain signals body gyroscope Jerk signals Standard deviation x-axis
+
+"31" "tBodyGyroJerkStdY"
+time domain signals body gyroscope Jerk signals Standard deviation y-axis
+
+"32" "tBodyGyroJerkStdZ"
+time domain signals body gyroscope Jerk signals Standard deviation z-axis
+
+"33" "tBodyAccMagMean"
+time domain signals body acceleration magnitude mean
+
+"34" "tBodyAccMagStd"
+time domain signals body acceleration magnitude Standard deviation
+
+"35" "tGravityAccMagMean"
+time domain signals gravity acceleration magnitude mean
+
+"36" "tGravityAccMagStd"
+time domain signals gravity acceleration magnitude Standard deviation
+
+"37" "tBodyAccJerkMagMean"
+time domain signals body acceleration Jerk signals magnitude mean
+
+"38" "tBodyAccJerkMagStd"
+time domain signals body acceleration Jerk signals magnitude Standard deviation
+
+"39" "tBodyGyroMagMean"
+time domain signals body gyroscope magnitude mean
+
+"40" "tBodyGyroMagStd"
+time domain signals body gyroscope magnitude Standard deviation
+
+"41" "tBodyGyroJerkMagMean"
+time domain signals body gyroscope mean Jerk signals magnitude mean
+
+"42" "tBodyGyroJerkMagStd"
+time domain signals body gyroscope Jerk signals magnitude Standard deviation
+
+"43" "fBodyAccMeanX"
+Fast Fourier Transform (FFT) body acceleration mean x-axis
+
+"44" "fBodyAccMeanY"
+Fast Fourier Transform (FFT) body acceleration mean y-axis
+
+"45" "fBodyAccMeanZ"
+Fast Fourier Transform (FFT) body acceleration mean z-axis
+
+"46" "fBodyAccStdX"
+Fast Fourier Transform (FFT) body acceleration Standard deviation x-axis
+
+"47" "fBodyAccStdY"
+Fast Fourier Transform (FFT) body acceleration Standard deviation y-axis
+
+"48" "fBodyAccStdZ"
+Fast Fourier Transform (FFT) body acceleration Standard deviation z-axis
+
+"49" "fBodyAccJerkMeanX"
+Fast Fourier Transform (FFT) body acceleration Jerk signals mean x-axis
+
+"50" "fBodyAccJerkMeanY"
+Fast Fourier Transform (FFT) body acceleration Jerk signals mean y-axis
+
+"51" "fBodyAccJerkMeanZ"
+Fast Fourier Transform (FFT) body acceleration Jerk signals mean z-axis
+
+"52" "fBodyAccJerkStdX"
+Fast Fourier Transform (FFT) body acceleration Jerk signals Standard deviation x-axis
+
+"53" "fBodyAccJerkStdY"
+Fast Fourier Transform (FFT) body acceleration Jerk signals Standard deviation y-axis
+
+"54" "fBodyAccJerkStdZ"
+Fast Fourier Transform (FFT) body acceleration Jerk signals Standard deviation z-axis
+
+"55" "fBodyGyroMeanX"
+Fast Fourier Transform (FFT) body gyroscope mean x-axis
+
+"56" "fBodyGyroMeanY"
+fBodyGyroMeanX
+
+"57" "fBodyGyroMeanZ"
+Fast Fourier Transform (FFT) body gyroscope mean z-axis
+
+"58" "fBodyGyroStdX"
+Fast Fourier Transform (FFT) body gyroscope Standard deviation x-axis
+
+"59" "fBodyGyroStdY"
+Fast Fourier Transform (FFT) body gyroscope Standard deviation y-axis
+
+"60" "fBodyGyroStdZ"
+Fast Fourier Transform (FFT) body gyroscope Standard deviation z-axis
+
+"61" "fBodyAccMagMean"
+Fast Fourier Transform (FFT) body acceleration magnitude mean
+
+"62" "fBodyAccMagStd"
+Fast Fourier Transform (FFT) body acceleration magnitude Standard deviation
+
+"63" "fBodyBodyAccJerkMagMean"
+Fast Fourier Transform (FFT) body acceleration Jerk signals magnitude mean
+
+"64" "fBodyBodyAccJerkMagStd"
+Fast Fourier Transform (FFT) body acceleration Jerk signals magnitude standard deviation
+
+"65" "fBodyBodyGyroMagMean"
+Fast Fourier Transform (FFT) body gyroscope magnitude mean
+
+"66" "fBodyBodyGyroMagStd"
+Fast Fourier Transform (FFT) body gyroscope magnitude Standard deviation
+
+"67" "fBodyBodyGyroJerkMagMean"
+Fast Fourier Transform (FFT) body gyroscope Jerk signals magnitude mean
+
+"68" "fBodyBodyGyroJerkMagStd"
+Fast Fourier Transform (FFT) body gyroscope Jerk signals magnitude standard deviation
